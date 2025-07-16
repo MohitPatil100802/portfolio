@@ -21,23 +21,14 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) throw new Error('Failed to send message');
-
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      alert('Message sent successfully!');
-    } catch (err) {
-      alert('There was an error sending your message.');
-    } finally {
-      setIsSubmitting(false);
-    }
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    console.log('Form submitted:', formData);
+    setIsSubmitting(false);
+    setFormData({ name: '', email: '', subject: '', message: '' });
+    alert('Message sent successfully!');
   };
 
   const contactInfo = [
