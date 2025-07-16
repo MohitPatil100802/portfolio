@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowDown, Github, Linkedin, Mail, MapPin } from 'lucide-react';
-import profileImg from '/dist/assets/profile.jpg';
+
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -88,7 +88,7 @@ const Hero = () => {
               <div className="relative w-full h-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full border-[2px] border-white/20 flex items-center justify-center">
                 <div className="w-72 h-72 lg:w-80 lg:h-80 bg-gradient-to-br from-gray-700 to-gray-800 rounded-full flex items-center justify-center overflow-hidden">
                   <img
-                    src={profileImg}
+                    src="/assets/profile.jpg"
                     alt="Profile"
                     className="w-full h-full object-cover rounded-full"
                     style={{ objectPosition: 'center 30%' }} // Moves image down
